@@ -1,0 +1,248 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 78 and seed 5534640042392109065 with 6 workers on 12 cores with 2428MB heap and 5460MB offheap memory [pid: 26372] (Mac OS X 10.15.7 x86_64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /Users/archermorgan/Documents/Personal Projects/TLA+/demos/FarmersDilemma.toolbox/Model_1/MC.tla
+Parsing file /Users/archermorgan/Documents/Personal Projects/TLA+/demos/FarmersDilemma.toolbox/Model_1/FarmersDilemma.tla
+Parsing file /Applications/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/TLC.tla
+Parsing file /Applications/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Sequences.tla
+Parsing file /Applications/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Integers.tla
+Parsing file /Applications/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/FiniteSets.tla
+Parsing file /Applications/TLA+ Toolbox.app/Contents/Eclipse/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Naturals.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module Integers
+Semantic processing of module FiniteSets
+Semantic processing of module FarmersDilemma
+Semantic processing of module TLC
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2021-01-20 17:56:06)
+@!@!@ENDMSG 2185 @!@!@
+<<"$!@$!@$!@$!@$!", {{1, 3}, {1, 2, 3}}>>
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated at 2021-01-20 17:56:07.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2110:1 @!@!@
+Invariant NotSolved is violated.
+@!@!@ENDMSG 2110 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ store = {"chicken", "fox", "corn"}
+/\ boat = "store"
+/\ farm = {}
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <StoreToFarm line 31, col 17 to line 34, col 46 of module FarmersDilemma>
+/\ store = {"fox", "corn"}
+/\ boat = "farm"
+/\ farm = {"chicken"}
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <FarmToStore line 36, col 17 to line 39, col 46 of module FarmersDilemma>
+/\ store = {"fox", "corn"}
+/\ boat = "store"
+/\ farm = {"chicken"}
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <StoreToFarm line 31, col 17 to line 34, col 46 of module FarmersDilemma>
+/\ store = {"corn"}
+/\ boat = "farm"
+/\ farm = {"chicken", "fox"}
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+5: <FarmToStore line 36, col 17 to line 39, col 46 of module FarmersDilemma>
+/\ store = {"chicken", "corn"}
+/\ boat = "store"
+/\ farm = {"fox"}
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+6: <StoreToFarm line 31, col 17 to line 34, col 46 of module FarmersDilemma>
+/\ store = {"chicken"}
+/\ boat = "farm"
+/\ farm = {"fox", "corn"}
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+7: <FarmToStore line 36, col 17 to line 39, col 46 of module FarmersDilemma>
+/\ store = {"chicken"}
+/\ boat = "store"
+/\ farm = {"fox", "corn"}
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+8: <StoreToFarm line 31, col 17 to line 34, col 46 of module FarmersDilemma>
+/\ store = {}
+/\ boat = "farm"
+/\ farm = {"chicken", "fox", "corn"}
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2021-01-20 17:56:07
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<Init line 23, col 1 to line 23, col 4 of module FarmersDilemma>: 2:2
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 23, col 9 to line 25, col 19 of module FarmersDilemma: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<StoreToFarm line 31, col 1 to line 31, col 11 of module FarmersDilemma>: 6:20
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 31, col 20 to line 31, col 33 of module FarmersDilemma: 22
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 31, col 20 to line 31, col 23 of module FarmersDilemma: 14
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 32, col 20 to line 32, col 33 of module FarmersDilemma: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 33, col 20 to line 33, col 77 of module FarmersDilemma: 19
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 33, col 31 to line 33, col 76 of module FarmersDilemma: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2775:0 @!@!@
+  ||line 33, col 31 to line 33, col 67 of module FarmersDilemma: 9:28
+@!@!@ENDMSG 2775 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 33, col 32 to line 33, col 44 of module FarmersDilemma: 27
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 33, col 53 to line 33, col 66 of module FarmersDilemma: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 28, col 15 to line 28, col 40 of module FarmersDilemma: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||line 28, col 15 to line 28, col 28 of module FarmersDilemma: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2775:0 @!@!@
+  ||||||line 28, col 16 to line 28, col 18 of module FarmersDilemma: 18:30
+@!@!@ENDMSG 2775 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 28, col 27 to line 28, col 27 of module FarmersDilemma: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2775:0 @!@!@
+  |||||line 28, col 37 to line 28, col 40 of module FarmersDilemma: 9:18
+@!@!@ENDMSG 2775 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 33, col 61 to line 33, col 65 of module FarmersDilemma: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 33, col 71 to line 33, col 76 of module FarmersDilemma: 9
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 34, col 20 to line 34, col 46 of module FarmersDilemma: 19
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 34, col 29 to line 34, col 46 of module FarmersDilemma: 20
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<FarmToStore line 36, col 1 to line 36, col 11 of module FarmersDilemma>: 4:17
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 36, col 20 to line 36, col 32 of module FarmersDilemma: 25
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 36, col 20 to line 36, col 23 of module FarmersDilemma: 17
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 37, col 20 to line 37, col 34 of module FarmersDilemma: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 38, col 20 to line 38, col 78 of module FarmersDilemma: 17
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 38, col 32 to line 38, col 77 of module FarmersDilemma: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2775:0 @!@!@
+  ||line 38, col 32 to line 38, col 68 of module FarmersDilemma: 8:25
+@!@!@ENDMSG 2775 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 38, col 33 to line 38, col 46 of module FarmersDilemma: 20
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 38, col 55 to line 38, col 67 of module FarmersDilemma: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 28, col 15 to line 28, col 40 of module FarmersDilemma: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||line 28, col 15 to line 28, col 28 of module FarmersDilemma: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2775:0 @!@!@
+  ||||||line 28, col 16 to line 28, col 18 of module FarmersDilemma: 12:24
+@!@!@ENDMSG 2775 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 28, col 27 to line 28, col 27 of module FarmersDilemma: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2775:0 @!@!@
+  |||||line 28, col 37 to line 28, col 40 of module FarmersDilemma: 8:16
+@!@!@ENDMSG 2775 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 38, col 63 to line 38, col 66 of module FarmersDilemma: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 38, col 72 to line 38, col 77 of module FarmersDilemma: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 39, col 20 to line 39, col 46 of module FarmersDilemma: 17
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<NotSolved line 49, col 1 to line 49, col 9 of module FarmersDilemma>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 49, col 14 to line 49, col 72 of module FarmersDilemma: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<ConstantSize line 51, col 1 to line 51, col 12 of module FarmersDilemma>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 51, col 17 to line 51, col 58 of module FarmersDilemma: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<NobodyIsLost line 50, col 1 to line 50, col 12 of module FarmersDilemma>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 50, col 17 to line 50, col 102 of module FarmersDilemma: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(8) at 2021-01-20 17:56:07: 22 states generated (1,090 s/min), 11 distinct states found (545 ds/min), 0 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+22 states generated, 11 distinct states found, 0 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2194:0 @!@!@
+The depth of the complete state graph search is 8.
+@!@!@ENDMSG 2194 @!@!@
+@!@!@STARTMSG 2268:0 @!@!@
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 2 and the 95th percentile is 2).
+@!@!@ENDMSG 2268 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 1220ms at (2021-01-20 17:56:07)
+@!@!@ENDMSG 2186 @!@!@
